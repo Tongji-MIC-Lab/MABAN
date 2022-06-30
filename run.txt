@@ -1,0 +1,26 @@
+MABAN
+
+Code for paper MABAN: Multi-Agent Boundary-Aware Network for Natural Language Moment Retrieval on Charades-STA dataset.
+
+1. Prerequisties
+(1) python 3.5.2
+(2) pytorch 0.4.1
+(3) pickle
+(4) numpy 1.16.1
+(5) h5py
+(6) matplotlib
+(7) gensim
+(8) nltk
+
+2. Preparation
+(1) Dowdload the annotation file from https://github.com/jiyanggao/TALL and inital videos from https://prior.allenai.org/projects/charades .
+(2) Download pretrained Glove Embeddings. wget http://nlp.stanford.edu/data/glove.840B.300d.zip
+(3) Get pretrained I3D features on Charades-STA by following https://github.com/piergiaj/pytorch-i3d to extract I3D feature.
+(4) Process datasets: cd dataset ; ./charades.sh 
+
+3. Train 
+python train.py --train_path dataset/charades/Charades_i3d_train_data.h5 --n_word 10 --n_frame 140 --gamma 0.4 --save_path model_charades --result_path result_charades/
+
+4. Test
+Modify the load_path
+python test.py --test_path dataset/charades/Charades_i3d_test_data.h5 --n_word 10 --n_frame 140
