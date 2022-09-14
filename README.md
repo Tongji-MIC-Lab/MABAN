@@ -47,3 +47,4 @@ The proposed MABAN is evaluated on two challenging benchmark datasets of Activit
 Please cite the following paper if you find this work useful:
 
 Xiaoyang Sun, Hanli Wang and Bin He, MABAN: Multi-Agent Boundary-Aware Network for Natural Language Moment Retrieval, IEEE Transactions on Image Processing, vol. 30, pp. 5589-5599, 2021.
+
